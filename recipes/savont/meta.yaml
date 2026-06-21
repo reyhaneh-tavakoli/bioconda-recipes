@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: savont
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluenote-1577/savont/archive/v{{ version }}.tar.gz
-  sha256: c3be422764e82b9cbc9f0f1e016f30a460f79d89ea0726f591e6729e4ecc0612
+  sha256: 98b91cf712dfeed2d9d5691a7f63d06f16b2585551a067a269dbcca0ec00d9a2
 
 build:
   number: 0
@@ -15,6 +15,8 @@ build:
 
 requirements:
   build:
+    - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - {{ compiler("cxx") }}
     - {{ compiler("rust") }}
     - make
